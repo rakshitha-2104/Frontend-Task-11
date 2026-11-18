@@ -5,7 +5,7 @@ const images = [
     },
     {
         src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1000",
-        caption: "Palm Island Dubai"
+        caption: "Dubai"
     },
     {
         src: "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=1000",
@@ -28,7 +28,7 @@ let slideshow = null;
 function showImage(index) {
     galleryImage.src=images[index].src;
     imageCaption.textContent=images[index].caption;
-    imageNumber.textContent='Image ${index + 1} of ${images.length}';
+    imageNumber.textContent=`Image ${index + 1} of ${images.length}`;
     const dots = document.querySelectorAll(".dot");
     dots.forEach((dot, i) => {
         dot.classList.toggle("active", i === index);
